@@ -1,0 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['name']))
+{
+	header('location:http://localhost/form/form1.php');
+}
+session_destroy();
+header('location:http://localhost/form/form1.php?status=loggedout');
+?>
